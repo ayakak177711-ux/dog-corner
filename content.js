@@ -99,10 +99,17 @@ function ensureOverlay() {
 }
 
 function setRootPosition(root, position) {
-  // positionがあれば left/top で固定。なければ右下デフォルト。
   if (position && Number.isFinite(position.left) && Number.isFinite(position.top)) {
-	root.style.left = `${position.left}px`;
-	root.style.top = `${position.top}px`;
+	const rect = root.getBoundingClientRect();
+	const vw = window.innerWidth;
+	const vh = window.innerHeight;
+	const margin = 6;
+
+	const safeLeft = clamp(position.left, margin, vw - rect.width - margin);
+	const safeTop  = clamp(position.top,  margin, vh - rect.height - margin);
+
+	root.style.left = `${safeLeft}px`;
+	root.style.top  = `${safeTop}px`;
 	root.style.right = "auto";
 	root.style.bottom = "auto";
   } else {
@@ -112,6 +119,7 @@ function setRootPosition(root, position) {
 	root.style.bottom = "14px";
   }
 }
+
 
 function applySettings(settings) {
   const root = ensureOverlay();
