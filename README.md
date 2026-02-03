@@ -3,6 +3,14 @@
 Chromeの画面右下に、愛犬の写真をそっと表示する拡張機能です。  
 作業中でも目に入るたびに、ちょっと元気が出ます。
 
+<img width="353" height="408" alt="image" src="https://github.com/user-attachments/assets/b0a554d7-e785-4a5a-b86d-09d48bd6f501" />
+<br/>
+<img width="500" height="auto" alt="image" src="https://github.com/user-attachments/assets/fdd9da80-018b-4fc0-80ca-47f5ed592ca5" />
+<br/>
+<img width="500" height="auto" alt="image" src="https://github.com/user-attachments/assets/785286c9-433b-4564-ba13-3573c0a39758" />
+
+
+
 ## Features
 - ブラウザ右下に画像を固定表示
 - 画像は角に馴染むようにサイズ調整
